@@ -18,7 +18,7 @@ class _CartScreenState extends ConsumerState<CartScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Your Cart'),
+        title: const Text('Selected Products'),
         centerTitle: true,
         // actions: [],
       ),
