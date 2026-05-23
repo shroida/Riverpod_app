@@ -1,4 +1,3 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_app/models/product.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
@@ -19,4 +18,9 @@ class CartNotifier extends _$CartNotifier {
   void removeFromCart(Product product) {
     state = {...state}..remove(product);
   }
+}
+@riverpod
+int cartTotal(Ref ref) {
+  final cartProducts = ref.watch(cartProvider);
+  return cartProducts.fold(0, (total, product) => total + product.price);
 }

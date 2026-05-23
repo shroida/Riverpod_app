@@ -42,7 +42,9 @@ class _CartScreenState extends ConsumerState<CartScreen> {
                 );
               }).toList(), // output cart products here
             ),
-
+              const SizedBox(height: 20),
+              Text('Total: £${ref.watch(cartTotalProvider)}'), // output total here
+              const SizedBox(height: 20),
             // output totals here
           ],
         ),
