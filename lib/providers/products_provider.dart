@@ -15,11 +15,12 @@ const List<Product> allProducts = [
 
 
 
-final reducedProductsProvider = Provider((ref) {
-  return allProducts.where((p) => p.price < 50).toList();
-});
 
 @riverpod
 List<Product> products(dynamic ref) {
   return allProducts;
 }
+@riverpod
+List<Product>   reducedProducts(dynamic ref) {
+  return allProducts.where((p) => p.price < 50).toList();
+} 
