@@ -10,11 +10,10 @@ class CartScreen extends ConsumerStatefulWidget {
 }
 
 class _CartScreenState extends ConsumerState<CartScreen> {
-  bool showCoupon = true;
-
   @override
   Widget build(BuildContext context) {
     final cartProducts = ref.watch(cartProvider); // watch cart products here
+  final totalPrice =ref.watch(cartTotalProvider);
 
     return Scaffold(
       appBar: AppBar(
@@ -43,7 +42,7 @@ class _CartScreenState extends ConsumerState<CartScreen> {
               }).toList(), // output cart products here
             ),
               const SizedBox(height: 20),
-              Text('Total: £${ref.watch(cartTotalProvider)}'), // output total here
+              Text('Total: £$totalPrice'), // output total here
               const SizedBox(height: 20),
             // output totals here
           ],
