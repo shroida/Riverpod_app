@@ -1,4 +1,3 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_app/models/product.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'products_provider.g.dart';
@@ -17,10 +16,10 @@ const List<Product> allProducts = [
 
 
 @riverpod
-List<Product> products(dynamic ref) {
+List<Product> products(Ref ref) {
   return allProducts;
 }
 @riverpod
-List<Product>   reducedProducts(dynamic ref) {
+List<Product> reducedProducts(Ref ref) {
   return allProducts.where((p) => p.price < 50).toList();
 } 

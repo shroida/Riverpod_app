@@ -48,7 +48,7 @@ final class ProductsProvider
   }
 }
 
-String _$productsHash() => r'7393201379c7c8a8b3c370931f678a67322f7a81';
+String _$productsHash() => r'71142ae3ed0349ae544109b0490fec9e77bcaceb';
 
 @ProviderFor(reducedProducts)
 final reducedProductsProvider = ReducedProductsProvider._();
@@ -89,4 +89,4 @@ final class ReducedProductsProvider
   }
 }
 
-String _$reducedProductsHash() => r'0c2ab4edb11b840a1c33440065a3242c514cb60c';
+String _$reducedProductsHash() => r'b805c15b26da572e76d48f0852b9bbba616a165a';
